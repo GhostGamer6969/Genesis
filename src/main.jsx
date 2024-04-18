@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import {ReactDOM, HashRouter} from 'react-dom/client'
 import App from './App.jsx'
 import {
   createBrowserRouter,
@@ -37,7 +37,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <HashRouter>
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </HashRouter>
 )
