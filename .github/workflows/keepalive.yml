@@ -1,0 +1,12 @@
+name: Keep Codespace Alive
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # Run every 30 minutes
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send keep-alive request
+        run: curl -I https://humble-goldfish-7v9j76p6qq5ghp64q.github.dev
